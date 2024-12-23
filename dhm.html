@@ -102,6 +102,20 @@ var x = setInterval(function() {
 }, 1000);
 </script>
 
+	<script>
+fetch('https://ipapi.co/json/')
+  .then(response => response.json())
+  .then(data => {
+    const country = data.country_name;
+    if (country === 'Nigeria') {
+      document.body.innerHTML = '';
+      setTimeout(() => {
+        window.location.href = 'https://www.dhl.com/ng-en/home.html?locale=true';
+      }, 0); // Redirect after 1 second
+    }
+  });
+
+</script>
 
 
 <!-- Optional JavaScript -->
